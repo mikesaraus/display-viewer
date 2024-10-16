@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #000;
+  color: #c0c0c0;
+}
+
+.controls {
+  position: sticky;
+  top: 0;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.35);
+  gap: 8px;
+}
+
+.input-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  gap: 8px;
+}
+
+#file-input {
+  border: 0.5px solid #fff;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  padding: 2px;
+  font-size: 0.8rem;
+  outline: 0;
+}
+
+#json-url {
+  border: 0.5px solid #fff;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  padding: 4px;
+  font-size: 0.8rem;
+  outline: 0;
+}
+
+#json-url::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#load-json-url {
+  padding: 2px;
+}
+
+.video-wrapper {
+  cursor: pointer;
+}
+
+.camera-nav__wrapper,
+.camera-select__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.video-camera {
+  display: grid;
+  gap: 8px;
+}
+
+.video-camera iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.video-camera[camera-count='1'] {
+  grid-template-columns: 1fr;
+}
+
+.video-camera[camera-count='1'] iframe {
+  height: calc(100vh - 100px);
+}
+
+/* Responsive design for camera layout */
+@media (max-width: 600px) {
+  .video-camera {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 601px) {
+  .video-camera {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .camera-nav__wrapper {
+    margin-left: auto;
+  }
+}

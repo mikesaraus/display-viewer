@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Viewer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="controls">
+      <div class="camera-select__wrapper">
+        <label for="camera-select">Video Display:</label>
+        <select id="camera-select" aria-label="Select number of video views">
+          <option value="1">1 View</option>
+          <option value="2">2 Views</option>
+          <option value="4">4 Views</option>
+          <option value="6">6 Views</option>
+          <option value="8">8 Views</option>
+          <option value="12">12 Views</option>
+          <option value="16">16 Views</option>
+          <option value="0">All Views</option>
+        </select>
+      </div>
+      <div class="camera-nav__wrapper">
+        <button id="prev" aria-label="Go to previous page">Previous</button>
+        <button id="next" aria-label="Go to next page">Next</button>
+      </div>
+      <div id="page-info" aria-live="polite"></div>
+    </div>
+
+    <div class="input-controls">
+      <label for="json-url">JSON URL:</label>
+      <input type="text" id="json-url" placeholder="Enter JSON URL" aria-label="Enter JSON URL" />
+      <button id="load-json-url" aria-label="Load JSON from URL">Load URL</button>
+
+      <label for="file-input">Or select JSON file:</label>
+      <input type="file" id="file-input" accept=".json" aria-label="Select JSON file" />
+    </div>
+
+    <div id="video-camera" class="video-camera" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
