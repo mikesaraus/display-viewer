@@ -11,6 +11,7 @@ body {
   padding: 10px 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   background-color: rgba(0, 0, 0, 0.35);
   gap: 8px;
@@ -20,6 +21,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   padding: 10px 0;
   gap: 8px;
 }
